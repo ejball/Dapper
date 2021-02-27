@@ -50,7 +50,7 @@ namespace Dapper.Tests
     public abstract class SqlServerDatabaseProvider : DatabaseProvider
     {
         public override string GetConnectionString() => 
-            GetConnectionString("SqlServerConnectionString", "Data Source=.;Initial Catalog=tempdb;Integrated Security=True");
+            GetConnectionString("SqlServerConnectionString", "data source=localhost;user id=sa;password=P@ssw0rd;Initial Catalog=tempdb");
 
         public DbConnection GetOpenConnection(bool mars)
         {
